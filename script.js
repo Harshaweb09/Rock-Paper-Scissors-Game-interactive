@@ -1,4 +1,5 @@
 document.getElementById('start-game').addEventListener('click', startGame);
+document.getElementById('restart-game').addEventListener('click', restartGame);
 
 let playerScore = 0;
 let computerScore = 0;
@@ -20,6 +21,7 @@ function startGame() {
     document.getElementById('rounds-info').textContent = `Round 1 of ${rounds}`;
     document.getElementById('result-message').textContent = '';
     document.querySelector('.game').classList.remove('hidden');
+    document.getElementById('restart-game').classList.remove('hidden');
 }
 
 function playRound(event) {
@@ -39,10 +41,10 @@ function playRound(event) {
         (playerChoice === 'scissors' && computerChoice === 'paper')
     ) {
         playerScore++;
-        resultMessage.textContent = `You win this round! ${playerChoice} beats ${computerChoice}.`;
+        resultMessage.textContent = `You win this round! ${playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1)} beats ${computerChoice}.`;
     } else {
         computerScore++;
-        resultMessage.textContent = `You lose this round! ${computerChoice} beats ${playerChoice}.`;
+        resultMessage.textContent = `You lose this round! ${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)} beats ${playerChoice}.`;
     }
 
     document.getElementById('player-score').textContent = `Player: ${playerScore}`;
@@ -54,4 +56,10 @@ function playRound(event) {
     }
 
     currentRound++;
+}
+
+function restartGame() {
+    document.querySelector('.game').classList.add('hidden');
+    document.getElementById('restart-game').classList.add('hidden');
+    document.getElementById('result-message').textContent = '';
 }

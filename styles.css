@@ -48,6 +48,7 @@ button {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
+    margin: 5px;
 }
 
 button:hover {
@@ -71,26 +72,66 @@ button:hover {
 .choices {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
 .choice {
-    font-size: 40px;
+    font-size: 20px;
     background: none;
     border: none;
     cursor: pointer;
     transition: transform 0.2s;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ff6f61;
+    color: #fff;
+    margin: 10px;
+    flex-basis: 30%;
+    text-align: center;
 }
 
 .choice:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    background-color: #ff3b3b;
 }
 
 .result {
     margin-bottom: 20px;
+    font-size: 18px;
 }
 
 .rounds-info {
     font-size: 18px;
     margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .scoreboard {
+        flex-direction: column;
+    }
+
+    .score {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .choice {
+        font-size: 18px;
+        flex-basis: 80%;
+        margin: 5px 0;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
 }
