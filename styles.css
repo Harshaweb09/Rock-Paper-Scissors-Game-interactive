@@ -139,3 +139,24 @@ button:hover {
         font-size: 14px;
     }
 }
+.footer {
+    position: fixed; /* Fixed position */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+    background-color: #fff; /* Background color */
+    padding: 10px 0; /* Padding top and bottom */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Shadow for separation */
+    text-align: center; /* Center align text */
+    font-size: 14px; /* Font size */
+    color: #888; /* Text color */
+}
+
+.footer a {
+    color: #888; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.footer a:hover {
+    color: #333; /* Darken color on hover */
+}
