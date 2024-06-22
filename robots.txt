@@ -3,3 +3,5 @@ Disallow:
 
 User-agent: Mediapartners-Google
 Disallow:
+
+Sitemap: https://telugu-coders-network.tech/sitemap.xml
